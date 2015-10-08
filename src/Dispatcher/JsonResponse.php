@@ -4,7 +4,7 @@ namespace Sid\Phalcon\Events\Dispatcher;
 
 class JsonResponse extends \Phalcon\Mvc\User\Plugin
 {
-    public function afterDispatchLoop(\Phalcon\Events\Event $event, \Phalcon\Mvc\Dispatcher $dispatcher, $data)
+    public function afterDispatchLoop(\Phalcon\Events\Event $event, \Phalcon\Mvc\DispatcherInterface $dispatcher, $data)
     {
         $data = $dispatcher->getReturnedValue();
 

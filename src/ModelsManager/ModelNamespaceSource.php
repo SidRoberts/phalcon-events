@@ -4,7 +4,7 @@ namespace Sid\Phalcon\Events\ModelsManager;
 
 class ModelNamespaceSource extends \Phalcon\Mvc\User\Plugin
 {
-    public function afterInitialize($event, $modelsManager, $model)
+    public function afterInitialize(\Phalcon\Events\Event $event, \Phalcon\Mvc\Model\ManagerInterface $modelsManager, \Phalcon\Mvc\ModelInterface $model)
     {
         $className = get_class($model);
 
