@@ -2,6 +2,9 @@
 
 namespace Sid\Phalcon\Events\Db;
 
+/**
+ * Logs database queries.
+ */
 class Logger extends \Phalcon\Mvc\User\Plugin
 {
     /**

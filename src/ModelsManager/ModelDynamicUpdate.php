@@ -2,6 +2,11 @@
 
 namespace Sid\Phalcon\Events\ModelsManager;
 
+/**
+ * Enables Dynamic Update for every model.
+ *
+ * @link https://docs.phalconphp.com/en/latest/reference/models.html#dynamic-update
+ */
 class ModelDynamicUpdate extends \Phalcon\Mvc\User\Plugin
 {
     /**
