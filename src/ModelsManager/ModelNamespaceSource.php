@@ -5,7 +5,7 @@ namespace Sid\Phalcon\Events\ModelsManager;
 /**
  * Allows you to use models in different namespaces without having to worry about conflicting names.
  *
- * Sid\Models\Posts -> "Sid_Pomelo_Models"
+ * Sid\Models\Posts -> "Sid_Models_Posts"
  */
 class ModelNamespaceSource extends \Phalcon\Mvc\User\Plugin
 {
