@@ -5,7 +5,7 @@ Miscellaneous events for use with the Phalcon framework.
 
 
 
-[![Build Status](https://travis-ci.org/SidRoberts/phalcon-events.svg?branch=master)](https://travis-ci.org/SidRoberts/phalcon-events) (note: no unit tests yet!)
+[![Build Status](https://travis-ci.org/SidRoberts/phalcon-events.svg?branch=master)](https://travis-ci.org/SidRoberts/phalcon-events) (note: limited unit tests!)
 
 
 
