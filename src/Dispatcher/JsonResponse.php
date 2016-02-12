@@ -12,6 +12,14 @@ class JsonResponse extends \Phalcon\Mvc\User\Plugin
     {
         $data = $dispatcher->getReturnedValue();
 
+        // Force returned value to an array.
+        $dispatcher->setReturnedValue(
+            json_decode(
+                json_encode($data),
+                true
+            )
+        );
+
         $this->response->setJsonContent($data, JSON_PRETTY_PRINT);
         $this->response->setContentType("application/json", "UTF-8");
         $this->response->setHeader('Cache-Control', 'private, max-age=0, must-revalidate');
