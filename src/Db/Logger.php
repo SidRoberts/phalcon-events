@@ -7,6 +7,8 @@ namespace Sid\Phalcon\Events\Db;
  */
 class Logger extends \Phalcon\Mvc\User\Plugin
 {
+    protected $logger;
+
     /**
      * @param \Phalcon\Logger\AdapterInterface $logger
      */
@@ -14,8 +16,6 @@ class Logger extends \Phalcon\Mvc\User\Plugin
     {
         $this->logger = $logger;
     }
-
-
 
     /**
      * @param \Phalcon\Events\Event        $event
