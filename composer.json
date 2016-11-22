@@ -23,15 +23,13 @@
 	
 	"require": {
 		"php": ">= 5.5",
-		
 		"ext-phalcon": ">= 2.0.0"
 	},
 	
 	"require-dev": {
-		"codeception/codeception": "2.1.2",
+		"codeception/codeception": "~2.2",
 		"phpunit/php-code-coverage": "~2.0",
 		"codeclimate/php-test-reporter": "dev-master",
-
 		"squizlabs/php_codesniffer": "2.*"
 	},
 	
