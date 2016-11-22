@@ -2,17 +2,22 @@
 
 namespace Sid\Phalcon\Events\View;
 
+use Phalcon\Events\Event;
+use Phalcon\Logger\AdapterInterface as LoggerAdapterInterface;
+use Phalcon\Mvc\User\Plugin;
+use Phalcon\Mvc\ViewInterface;
+
 /**
  * Logs not found view events.
  */
-class NotFoundListener extends \Phalcon\Mvc\User\Plugin
+class NotFoundListener extends Plugin
 {
     protected $logger;
 
     /**
-     * @param \Phalcon\Logger\AdapterInterface $logger
+     * @param LoggerAdapterInterface $logger
      */
-    public function __construct(\Phalcon\Logger\AdapterInterface $logger)
+    public function __construct(LoggerAdapterInterface $logger)
     {
         $this->logger = $logger;
     }
@@ -20,13 +25,13 @@ class NotFoundListener extends \Phalcon\Mvc\User\Plugin
     /**
      * Notify about not found views.
      *
-     * @param \Phalcon\Events\EventInterface $event
-     * @param \Phalcon\Mvc\ViewInterface $view
-     * @param mixed $enginePath
+     * @param Event         $event
+     * @param ViewInterface $view
+     * @param mixed         $enginePath
      *
      * @return bool
      */
-    public function notFoundView(\Phalcon\Events\EventInterface $event, \Phalcon\Mvc\ViewInterface $view, $enginePath)
+    public function notFoundView(Event $event, ViewInterface $view, $enginePath)
     {
         if ($enginePath && !is_array($enginePath)) {
             $enginePath = [$enginePath];

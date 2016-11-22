@@ -2,15 +2,19 @@
 
 namespace Sid\Phalcon\Events\Dispatcher;
 
-class CliSudoPermissions extends \Phalcon\Mvc\User\Plugin
+use Phalcon\Cli\DispatcherInterface as CliDispatcherInterface;
+use Phalcon\Events\Event;
+use Phalcon\Mvc\User\Plugin;
+
+class CliSudoPermissions extends Plugin
 {
     /**
-     * @param \Phalcon\Events\Event   $event
-     * @param \Phalcon\Cli\Dispatcher $dispatcher
+     * @param Event                  $event
+     * @param CliDispatcherInterface $dispatcher
      *
      * @throws \Phalcon\Cli\Dispatcher\Exception
      */
-    public function beforeExecuteRoute(\Phalcon\Events\Event $event, \Phalcon\Cli\Dispatcher $dispatcher, $data)
+    public function beforeExecuteRoute(Event $event, CliDispatcherInterface $dispatcher, $data)
     {
         $methodAnnotations = $this->annotations->getMethod(
             $dispatcher->getHandlerClass(),

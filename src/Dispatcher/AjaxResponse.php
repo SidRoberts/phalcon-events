@@ -2,16 +2,21 @@
 
 namespace Sid\Phalcon\Events\Dispatcher;
 
-class AjaxResponse extends \Phalcon\Mvc\User\Plugin
+use Phalcon\Events\Event;
+use Phalcon\Mvc\DispatcherInterface as MvcDispatcherInterface;
+use Phalcon\Mvc\User\Plugin;
+use Phalcon\Mvc\View;
+
+class AjaxResponse extends Plugin
 {
     /**
-     * @param \Phalcon\Events\Event            $event
-     * @param \Phalcon\Mvc\DispatcherInterface $dispatcher
+     * @param Event                  $event
+     * @param MvcDispatcherInterface $dispatcher
      */
-    public function beforeDispatchLoop(\Phalcon\Events\Event $event, \Phalcon\Mvc\DispatcherInterface $dispatcher, $data)
+    public function beforeDispatchLoop(Event $event, MvcDispatcherInterface $dispatcher, $data)
     {
         if ($this->request->isAjax()) {
-            $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_LAYOUT);
+            $this->view->setRenderLevel(View::LEVEL_LAYOUT);
         }
     }
 }

@@ -2,13 +2,17 @@
 
 namespace Sid\Phalcon\Events\View;
 
-class Minify extends \Phalcon\Mvc\User\Plugin
+use Phalcon\Events\Event;
+use Phalcon\Mvc\User\Plugin;
+use Phalcon\Mvc\ViewInterface;
+
+class Minify extends Plugin
 {
     /**
-     * @param \Phalcon\Events\Event      $event
-     * @param \Phalcon\Mvc\ViewInterface $view
+     * @param Event         $event
+     * @param ViewInterface $view
      */
-    public function afterRender(\Phalcon\Events\Event $event, \Phalcon\Mvc\ViewInterface $view)
+    public function afterRender(Event $event, ViewInterface $view)
     {
         $content = $view->getContent();
 

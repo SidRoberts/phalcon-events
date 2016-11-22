@@ -2,10 +2,14 @@
 
 namespace Sid\Phalcon\Events\Model;
 
+use Phalcon\Events\Event;
+use Phalcon\Mvc\ModelInterface;
+use Phalcon\Mvc\User\Plugin;
+
 /**
  * Enable automatic preservation of dates of creation and change at existence of the corresponding fields
  */
-class ModelCreatedUpdatedDates extends \Phalcon\Mvc\User\Plugin
+class ModelCreatedUpdatedDates extends Plugin
 {
     /**
      * @var string
@@ -32,10 +36,10 @@ class ModelCreatedUpdatedDates extends \Phalcon\Mvc\User\Plugin
 
 
     /**
-     * @param \Phalcon\Events\Event       $event
-     * @param \Phalcon\Mvc\ModelInterface $model
+     * @param Event          $event
+     * @param ModelInterface $model
      */
-    public function beforeValidationOnCreate(\Phalcon\Events\Event $event, \Phalcon\Mvc\ModelInterface $model)
+    public function beforeValidationOnCreate(Event $event, ModelInterface $model)
     {
         if ($model->getModelsMetaData()->hasAttribute($model, $this->createdField)) {
             $model->assign(
@@ -47,10 +51,10 @@ class ModelCreatedUpdatedDates extends \Phalcon\Mvc\User\Plugin
     }
 
     /**
-     * @param \Phalcon\Events\Event       $event
-     * @param \Phalcon\Mvc\ModelInterface $model
+     * @param Event          $event
+     * @param ModelInterface $model
      */
-    public function beforeValidationOnUpdate(\Phalcon\Events\Event $event, \Phalcon\Mvc\ModelInterface $model)
+    public function beforeValidationOnUpdate(Event $event, ModelInterface $model)
     {
         if ($model->getModelsMetaData()->hasAttribute($model, $this->updatedField)) {
             $model->assign(

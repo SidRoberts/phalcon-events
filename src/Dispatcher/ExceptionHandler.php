@@ -2,7 +2,12 @@
 
 namespace Sid\Phalcon\Events\Dispatcher;
 
-class ExceptionHandler extends \Phalcon\Mvc\User\Plugin
+use Exception;
+use Phalcon\DispatcherInterface;
+use Phalcon\Events\Event;
+use Phalcon\Mvc\User\Plugin;
+
+class ExceptionHandler extends Plugin
 {
     /**
      * @var string
@@ -29,13 +34,13 @@ class ExceptionHandler extends \Phalcon\Mvc\User\Plugin
 
 
     /**
-     * @param \Phalcon\Events\Event        $event
-     * @param \Phalcon\DispatcherInterface $dispatcher
-     * @param \Exception                   $exception
+     * @param Event               $event
+     * @param DispatcherInterface $dispatcher
+     * @param Exception           $exception
      *
      * @return boolean
      */
-    public function beforeException(\Phalcon\Events\Event $event, \Phalcon\DispatcherInterface $dispatcher, \Exception $exception)
+    public function beforeException(Event $event, DispatcherInterface $dispatcher, Exception $exception)
     {
         $dispatcher->forward(
             [

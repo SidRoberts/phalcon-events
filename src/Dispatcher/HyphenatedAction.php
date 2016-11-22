@@ -2,17 +2,22 @@
 
 namespace Sid\Phalcon\Events\Dispatcher;
 
-class HyphenatedAction extends \Phalcon\Mvc\User\Plugin
+use Phalcon\DispatcherInterface;
+use Phalcon\Events\Event;
+use Phalcon\Mvc\User\Plugin;
+use Phalcon\Text;
+
+class HyphenatedAction extends Plugin
 {
     /**
-     * @param \Phalcon\Events\Event        $event
-     * @param \Phalcon\DispatcherInterface $dispatcher
+     * @param Event               $event
+     * @param DispatcherInterface $dispatcher
      */
-    public function beforeDispatchLoop(\Phalcon\Events\Event $event, \Phalcon\DispatcherInterface $dispatcher, $data)
+    public function beforeDispatchLoop(Event $event, DispatcherInterface $dispatcher, $data)
     {
         if ($dispatcher->getActionName()) {
             $actionName = $dispatcher->getActionName();
-            $actionName = \Phalcon\Text::camelize($actionName);
+            $actionName = Text::camelize($actionName);
             $actionName = lcfirst($actionName);
 
             $dispatcher->setActionName($actionName);
