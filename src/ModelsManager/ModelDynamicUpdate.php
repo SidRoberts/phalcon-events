@@ -15,16 +15,13 @@ use Phalcon\Mvc\User\Plugin;
 class ModelDynamicUpdate extends Plugin
 {
     /**
-     * @var boolean
+     * @var bool
      */
     protected $dynamicUpdate;
 
 
 
-    /**
-     * @param boolean $dynamicUpdate
-     */
-    public function __construct($dynamicUpdate = true)
+    public function __construct(bool $dynamicUpdate = true)
     {
         $this->dynamicUpdate = $dynamicUpdate;
     }

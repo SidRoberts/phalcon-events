@@ -28,10 +28,8 @@ class NotFoundListener extends Plugin
 
     /**
      * Notify about not found views.
-     *
-     * @return bool
      */
-    public function notFoundView(Event $event, ViewInterface $view, $enginePath)
+    public function notFoundView(Event $event, ViewInterface $view, $enginePath) : bool
     {
         if ($enginePath && !is_array($enginePath)) {
             $enginePath = [$enginePath];

@@ -21,11 +21,7 @@ class ExceptionHandler extends Plugin
 
 
 
-    /**
-     * @param string $controller
-     * @param string $action
-     */
-    public function __construct($controller = "error", $action = "exception")
+    public function __construct(string $controller = "error", string $action = "exception")
     {
         $this->controller = $controller;
         $this->action     = $action;
@@ -33,10 +29,7 @@ class ExceptionHandler extends Plugin
 
 
 
-    /**
-     * @return boolean
-     */
-    public function beforeException(Event $event, DispatcherInterface $dispatcher, Exception $exception)
+    public function beforeException(Event $event, DispatcherInterface $dispatcher, Exception $exception) : bool
     {
         $dispatcher->forward(
             [

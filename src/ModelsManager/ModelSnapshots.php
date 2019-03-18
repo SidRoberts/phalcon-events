@@ -15,16 +15,13 @@ use Phalcon\Mvc\User\Plugin;
 class ModelSnapshots extends Plugin
 {
     /**
-     * @var boolean
+     * @var bool
      */
     protected $keepSnapshots;
 
 
 
-    /**
-     * @param boolean $keepSnapshots
-     */
-    public function __construct($keepSnapshots = true)
+    public function __construct(bool $keepSnapshots = true)
     {
         $this->keepSnapshots = $keepSnapshots;
     }

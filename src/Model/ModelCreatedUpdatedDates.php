@@ -23,11 +23,7 @@ class ModelCreatedUpdatedDates extends Plugin
 
 
 
-    /**
-     * @param string $createdField
-     * @param string $updatedField
-     */
-    public function __construct($createdField = "created_at", $updatedField = "updated_at")
+    public function __construct(string $createdField = "created_at", string $updatedField = "updated_at")
     {
         $this->createdField = $createdField;
         $this->updatedField = $updatedField;
