@@ -1,2 +1,8 @@
 <?php
-// This is global bootstrap for autoloading
+
+namespace A\B\C {
+    class Posts extends \Phalcon\Mvc\Model
+    {
+        
+    }
+}

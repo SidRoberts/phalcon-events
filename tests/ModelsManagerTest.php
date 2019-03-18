@@ -4,11 +4,6 @@ namespace Sid\Phalcon\Events\Tests\Unit;
 
 class ModelsManagerTest extends \Codeception\TestCase\Test
 {
-   /**
-    * @var \UnitTester
-    */
-    protected $tester;
-
     protected function _before()
     {
         \Phalcon\Di::reset();
