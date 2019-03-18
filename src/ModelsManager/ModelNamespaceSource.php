@@ -14,11 +14,6 @@ use Phalcon\Mvc\User\Plugin;
  */
 class ModelNamespaceSource extends Plugin
 {
-    /**
-     * @param Event                 $event
-     * @param ModelManagerInterface $modelsManager
-     * @param ModelInterface        $model
-     */
     public function afterInitialize(Event $event, ModelManagerInterface $modelsManager, ModelInterface $model)
     {
         $className = get_class($model);

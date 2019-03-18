@@ -34,10 +34,6 @@ class ExceptionHandler extends Plugin
 
 
     /**
-     * @param Event               $event
-     * @param DispatcherInterface $dispatcher
-     * @param Exception           $exception
-     *
      * @return boolean
      */
     public function beforeException(Event $event, DispatcherInterface $dispatcher, Exception $exception)

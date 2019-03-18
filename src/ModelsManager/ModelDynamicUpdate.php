@@ -31,11 +31,6 @@ class ModelDynamicUpdate extends Plugin
 
 
 
-    /**
-     * @param Event                 $event
-     * @param ModelManagerInterface $modelsManager
-     * @param ModelInterface        $model
-     */
     public function afterInitialize(Event $event, ModelManagerInterface $modelsManager, ModelInterface $model)
     {
         $modelsManager->useDynamicUpdate($model, $this->dynamicUpdate);

@@ -8,10 +8,6 @@ use Phalcon\Mvc\User\Plugin;
 
 class JsonResponse extends Plugin
 {
-    /**
-     * @param Event                  $event
-     * @param MvcDispatcherInterface $dispatcher
-     */
     public function afterDispatchLoop(Event $event, MvcDispatcherInterface $dispatcher, $data)
     {
         $data = $dispatcher->getReturnedValue();

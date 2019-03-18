@@ -9,10 +9,6 @@ use Phalcon\Text;
 
 class HyphenatedAction extends Plugin
 {
-    /**
-     * @param Event               $event
-     * @param DispatcherInterface $dispatcher
-     */
     public function beforeDispatchLoop(Event $event, DispatcherInterface $dispatcher, $data)
     {
         if ($dispatcher->getActionName()) {

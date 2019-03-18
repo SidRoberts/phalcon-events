@@ -9,9 +9,6 @@ use Phalcon\Mvc\User\Plugin;
 class CliSudoPermissions extends Plugin
 {
     /**
-     * @param Event                  $event
-     * @param CliDispatcherInterface $dispatcher
-     *
      * @throws \Phalcon\Cli\Dispatcher\Exception
      */
     public function beforeExecuteRoute(Event $event, CliDispatcherInterface $dispatcher, $data)

@@ -19,9 +19,6 @@ class NotFoundListener extends Plugin
 
 
 
-    /**
-     * @param LoggerAdapterInterface $logger
-     */
     public function __construct(LoggerAdapterInterface $logger)
     {
         $this->logger = $logger;
@@ -31,10 +28,6 @@ class NotFoundListener extends Plugin
 
     /**
      * Notify about not found views.
-     *
-     * @param Event         $event
-     * @param ViewInterface $view
-     * @param mixed         $enginePath
      *
      * @return bool
      */

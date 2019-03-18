@@ -35,10 +35,6 @@ class ModelCreatedUpdatedDates extends Plugin
 
 
 
-    /**
-     * @param Event          $event
-     * @param ModelInterface $model
-     */
     public function beforeValidationOnCreate(Event $event, ModelInterface $model)
     {
         $modelsMetadata = $model->getModelsMetaData();
@@ -52,10 +48,6 @@ class ModelCreatedUpdatedDates extends Plugin
         }
     }
 
-    /**
-     * @param Event          $event
-     * @param ModelInterface $model
-     */
     public function beforeValidationOnUpdate(Event $event, ModelInterface $model)
     {
         $modelsMetadata = $model->getModelsMetaData();
