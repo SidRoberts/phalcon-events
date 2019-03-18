@@ -22,9 +22,24 @@ class ModelsManagerTest extends \Codeception\TestCase\Test
 
                 $eventsManager = new \Phalcon\Events\Manager();
 
-                $eventsManager->attach("modelsManager", new \Sid\Phalcon\Events\ModelsManager\ModelDynamicUpdate());
-                $eventsManager->attach("modelsManager", new \Sid\Phalcon\Events\ModelsManager\ModelNamespaceSource());
-                $eventsManager->attach("modelsManager", new \Sid\Phalcon\Events\ModelsManager\ModelSnapshots());
+
+
+                $eventsManager->attach(
+                    "modelsManager",
+                    new \Sid\Phalcon\Events\ModelsManager\ModelDynamicUpdate()
+                );
+
+                $eventsManager->attach(
+                    "modelsManager",
+                    new \Sid\Phalcon\Events\ModelsManager\ModelNamespaceSource()
+                );
+
+                $eventsManager->attach(
+                    "modelsManager",
+                    new \Sid\Phalcon\Events\ModelsManager\ModelSnapshots()
+                );
+
+
 
                 $modelsManager->setEventsManager($eventsManager);
 
@@ -40,13 +55,17 @@ class ModelsManagerTest extends \Codeception\TestCase\Test
     {
     }
 
+
+
     // tests
     public function testModelDynamicUpdate()
     {
         $post = new \A\B\C\Posts();
 
+        $modelsManager = $post->getModelsManager();
+
         $this->assertTrue(
-            $post->getModelsManager()->isUsingDynamicUpdate($post)
+            $modelsManager->isUsingDynamicUpdate($post)
         );
     }
 
@@ -64,8 +83,10 @@ class ModelsManagerTest extends \Codeception\TestCase\Test
     {
         $post = new \A\B\C\Posts();
 
+        $modelsManager = $post->getModelsManager();
+
         $this->assertTrue(
-            $post->getModelsManager()->isKeepingSnapshots($post)
+            $modelsManager->isKeepingSnapshots($post)
         );
     }
 }

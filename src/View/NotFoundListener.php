@@ -12,7 +12,12 @@ use Phalcon\Mvc\ViewInterface;
  */
 class NotFoundListener extends Plugin
 {
+    /**
+     * @var LoggerAdapterInterface
+     */
     protected $logger;
+
+
 
     /**
      * @param LoggerAdapterInterface $logger
@@ -21,6 +26,8 @@ class NotFoundListener extends Plugin
     {
         $this->logger = $logger;
     }
+
+
 
     /**
      * Notify about not found views.

@@ -41,7 +41,9 @@ class ModelCreatedUpdatedDates extends Plugin
      */
     public function beforeValidationOnCreate(Event $event, ModelInterface $model)
     {
-        if ($model->getModelsMetaData()->hasAttribute($model, $this->createdField)) {
+        $modelsMetadata = $model->getModelsMetaData();
+
+        if ($modelsMetadata->hasAttribute($model, $this->createdField)) {
             $model->assign(
                 [
                     $this->createdField => date('Y-m-d H:i:s')
@@ -56,7 +58,9 @@ class ModelCreatedUpdatedDates extends Plugin
      */
     public function beforeValidationOnUpdate(Event $event, ModelInterface $model)
     {
-        if ($model->getModelsMetaData()->hasAttribute($model, $this->updatedField)) {
+        $modelsMetadata = $model->getModelsMetaData();
+
+        if ($modelsMetadata->hasAttribute($model, $this->updatedField)) {
             $model->assign(
                 [
                     $this->updatedField => date('Y-m-d H:i:s')
