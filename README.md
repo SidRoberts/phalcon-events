@@ -15,9 +15,9 @@ Install using Composer:
 
 ```json
 {
-	"require": {
-		"sidroberts/phalcon-events": "dev-master"
-	}
+    "require": {
+        "sidroberts/phalcon-events": "dev-master"
+    }
 }
 ```
 
