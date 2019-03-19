@@ -23,7 +23,9 @@ Install using Composer:
 
 ## Usage ##
 
-The contents of this repo are subject to change at any time. If you wish to use this as a Composer package, please explicitly state the commit ID. For example:
+The contents of this repo are subject to change at any time.
+If you wish to use this as a Composer package, please explicitly state the commit ID.
+For example:
 
 ```json
 {
