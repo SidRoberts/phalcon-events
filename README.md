@@ -5,7 +5,12 @@ Miscellaneous events for use with the Phalcon framework.
 
 
 
-[![Build Status](https://travis-ci.org/SidRoberts/phalcon-events.svg?branch=master)](https://travis-ci.org/SidRoberts/phalcon-events) (note: limited unit tests!)
+[![Build Status](https://img.shields.io/travis/SidRoberts/phalcon-events/master.svg?style=for-the-badge)](https://travis-ci.org/SidRoberts/phalcon-events) (note: limited unit tests!)
+
+[![License](https://img.shields.io/github/license/SidRoberts/phalcon-events.svg?style=for-the-badge)]()
+
+[![GitHub issues](https://img.shields.io/github/issues-raw/SidRoberts/phalcon-events.svg?style=for-the-badge)]()
+[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/SidRoberts/phalcon-events.svg?style=for-the-badge)]()
 
 
 
