@@ -36,8 +36,8 @@ class NotFoundListener extends Plugin
         }
 
         $message = sprintf(
-            'View was not found in any of the views directory. Active render paths: [%s]',
-            ($enginePath ? join(', ', $enginePath) : gettype($enginePath))
+            "View was not found in any of the views directory. Active render paths: [%s]",
+            ($enginePath ? join(", ", $enginePath) : gettype($enginePath))
         );
 
         $this->logger->error($message);

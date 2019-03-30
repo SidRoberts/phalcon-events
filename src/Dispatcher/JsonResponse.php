@@ -27,8 +27,8 @@ class JsonResponse extends Plugin
         $this->response->setContentType("application/json", "UTF-8");
 
         $this->response->setHeader(
-            'Cache-Control',
-            'private, max-age=0, must-revalidate'
+            "Cache-Control",
+            "private, max-age=0, must-revalidate"
         );
     }
 }

@@ -38,7 +38,7 @@ class ModelCreatedUpdatedDates extends Plugin
         if ($modelsMetadata->hasAttribute($model, $this->createdField)) {
             $model->assign(
                 [
-                    $this->createdField => date('Y-m-d H:i:s')
+                    $this->createdField => date("Y-m-d H:i:s")
                 ]
             );
         }
@@ -51,7 +51,7 @@ class ModelCreatedUpdatedDates extends Plugin
         if ($modelsMetadata->hasAttribute($model, $this->updatedField)) {
             $model->assign(
                 [
-                    $this->updatedField => date('Y-m-d H:i:s')
+                    $this->updatedField => date("Y-m-d H:i:s")
                 ]
             );
         }

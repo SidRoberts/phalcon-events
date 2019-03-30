@@ -18,10 +18,10 @@ class CliSudoPermissions extends Plugin
             $dispatcher->getActiveMethod()
         );
 
-        if ($methodAnnotations->has('RequiresSudo')) {
+        if ($methodAnnotations->has("RequiresSudo")) {
             if (posix_getuid() != 0) {
                 throw new \Phalcon\Cli\Dispatcher\Exception(
-                    'This action requires sudo.'
+                    "This action requires sudo."
                 );
             }
         }
