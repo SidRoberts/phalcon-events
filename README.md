@@ -9,8 +9,8 @@ Miscellaneous events for use with the Phalcon framework.
 
 [![License](https://img.shields.io/github/license/SidRoberts/phalcon-events.svg?style=for-the-badge)]()
 
-[![GitHub issues](https://img.shields.io/github/issues-raw/SidRoberts/phalcon-events.svg?style=for-the-badge)]()
-[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/SidRoberts/phalcon-events.svg?style=for-the-badge)]()
+[![GitHub issues](https://img.shields.io/github/issues-raw/SidRoberts/phalcon-events.svg?style=for-the-badge)](https://github.com/SidRoberts/phalcon-events/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/SidRoberts/phalcon-events.svg?style=for-the-badge)](https://github.com/SidRoberts/phalcon-events/pulls)
 
 
 
