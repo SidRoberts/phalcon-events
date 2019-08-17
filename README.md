@@ -6,8 +6,6 @@ Miscellaneous events for use with the Phalcon framework.
 
 [![Build Status](https://img.shields.io/travis/SidRoberts/phalcon-events/master.svg?style=for-the-badge)](https://travis-ci.org/SidRoberts/phalcon-events) (note: limited unit tests!)
 
-[![License](https://img.shields.io/github/license/SidRoberts/phalcon-events.svg?style=for-the-badge)]()
-
 [![GitHub issues](https://img.shields.io/github/issues-raw/SidRoberts/phalcon-events.svg?style=for-the-badge)](https://github.com/SidRoberts/phalcon-events/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/SidRoberts/phalcon-events.svg?style=for-the-badge)](https://github.com/SidRoberts/phalcon-events/pulls)
 
@@ -44,3 +42,10 @@ For example:
 [See the documentation for more details](https://getcomposer.org/doc/04-schema.md#package-links).
 
 Any code that "graduates" into its own repository will be posted here.
+
+
+
+## License
+
+Licensed under the MIT License.
+© [Sid Roberts](https://github.com/SidRoberts)
