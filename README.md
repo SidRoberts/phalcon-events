@@ -1,5 +1,4 @@
-Sid\Phalcon\Events
-==================
+# `Sid\Phalcon\Events`
 
 Miscellaneous events for use with the Phalcon framework.
 
@@ -14,7 +13,7 @@ Miscellaneous events for use with the Phalcon framework.
 
 
 
-## Installing ##
+## Installing
 
 Install using Composer:
 
@@ -26,7 +25,9 @@ Install using Composer:
 }
 ```
 
-## Usage ##
+
+
+## Usage
 
 The contents of this repo are subject to change at any time.
 If you wish to use this as a Composer package, please explicitly state the commit ID.
