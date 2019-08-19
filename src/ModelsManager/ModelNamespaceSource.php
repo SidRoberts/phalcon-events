@@ -8,7 +8,8 @@ use Phalcon\Mvc\ModelInterface;
 use Phalcon\Mvc\User\Plugin;
 
 /**
- * Allows you to use models in different namespaces without having to worry about conflicting names.
+ * Allows you to use models in different namespaces without having to worry
+ * about conflicting names.
  *
  * Sid\Models\Posts -> "Sid_Models_Posts"
  */
