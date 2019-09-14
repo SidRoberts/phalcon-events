@@ -11,10 +11,13 @@ class AjaxResponse extends Plugin
 {
     public function beforeDispatchLoop(Event $event, MvcDispatcherInterface $dispatcher, $data)
     {
-        if ($this->request->isAjax()) {
-            $this->view->setRenderLevel(
-                View::LEVEL_LAYOUT
-            );
+        // Ignore non-Ajax requests
+        if (!$this->request->isAjax()) {
+            return true;
         }
+
+        $this->view->setRenderLevel(
+            View::LEVEL_LAYOUT
+        );
     }
 }

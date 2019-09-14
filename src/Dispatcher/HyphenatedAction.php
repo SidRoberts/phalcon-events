@@ -10,12 +10,15 @@ class HyphenatedAction
 {
     public function beforeDispatchLoop(Event $event, DispatcherInterface $dispatcher, $data)
     {
-        if ($dispatcher->getActionName()) {
-            $actionName = $dispatcher->getActionName();
-            $actionName = Text::camelize($actionName);
-            $actionName = lcfirst($actionName);
-
-            $dispatcher->setActionName($actionName);
+        // Skip to avoid mutating the action name from null to ''
+        if (!$dispatcher->getActionName()) {
+            return true;
         }
+
+        $actionName = $dispatcher->getActionName();
+        $actionName = Text::camelize($actionName);
+        $actionName = lcfirst($actionName);
+
+        $dispatcher->setActionName($actionName);
     }
 }
