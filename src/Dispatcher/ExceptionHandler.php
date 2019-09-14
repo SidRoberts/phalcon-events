@@ -36,8 +36,8 @@ class ExceptionHandler extends Plugin
                 "controller" => $this->controller,
                 "action"     => $this->action,
                 "params"     => [
-                    $exception
-                ]
+                    $exception,
+                ],
             ]
         );
 
