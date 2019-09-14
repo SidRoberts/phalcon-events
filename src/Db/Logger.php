@@ -5,12 +5,11 @@ namespace Sid\Phalcon\Events\Db;
 use Phalcon\Db\AdapterInterface as DbAdapterInterface;
 use Phalcon\Events\Event;
 use Phalcon\Logger\AdapterInterface as LoggerAdapterInterface;
-use Phalcon\Mvc\User\Plugin;
 
 /**
  * Logs database queries.
  */
-class Logger extends Plugin
+class Logger
 {
     /**
      * @var LoggerAdapterInterface

@@ -5,14 +5,13 @@ namespace Sid\Phalcon\Events\ModelsManager;
 use Phalcon\Events\Event;
 use Phalcon\Mvc\Model\ManagerInterface as ModelManagerInterface;
 use Phalcon\Mvc\ModelInterface;
-use Phalcon\Mvc\User\Plugin;
 
 /**
  * Enable/disable snapshots for every model.
  *
  * @link https://docs.phalconphp.com/en/latest/reference/models.html#record-snapshots
  */
-class ModelSnapshots extends Plugin
+class ModelSnapshots
 {
     /**
      * @var bool

@@ -5,14 +5,13 @@ namespace Sid\Phalcon\Events\ModelsManager;
 use Phalcon\Events\Event;
 use Phalcon\Mvc\Model\ManagerInterface as ModelManagerInterface;
 use Phalcon\Mvc\ModelInterface;
-use Phalcon\Mvc\User\Plugin;
 
 /**
  * Enables/disables Dynamic Update for every model.
  *
  * @link https://docs.phalconphp.com/en/latest/reference/models.html#dynamic-update
  */
-class ModelDynamicUpdate extends Plugin
+class ModelDynamicUpdate
 {
     /**
      * @var bool

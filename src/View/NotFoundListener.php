@@ -4,13 +4,12 @@ namespace Sid\Phalcon\Events\View;
 
 use Phalcon\Events\Event;
 use Phalcon\Logger\AdapterInterface as LoggerAdapterInterface;
-use Phalcon\Mvc\User\Plugin;
 use Phalcon\Mvc\ViewInterface;
 
 /**
  * Logs not found view events.
  */
-class NotFoundListener extends Plugin
+class NotFoundListener
 {
     /**
      * @var LoggerAdapterInterface

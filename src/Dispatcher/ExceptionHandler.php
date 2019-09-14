@@ -5,9 +5,8 @@ namespace Sid\Phalcon\Events\Dispatcher;
 use Exception;
 use Phalcon\DispatcherInterface;
 use Phalcon\Events\Event;
-use Phalcon\Mvc\User\Plugin;
 
-class ExceptionHandler extends Plugin
+class ExceptionHandler
 {
     /**
      * @var string

@@ -4,13 +4,12 @@ namespace Sid\Phalcon\Events\Model;
 
 use Phalcon\Events\Event;
 use Phalcon\Mvc\ModelInterface;
-use Phalcon\Mvc\User\Plugin;
 
 /**
  * Enable automatic preservation of dates of creation and change at existence of
  * the corresponding fields
  */
-class ModelCreatedUpdatedDates extends Plugin
+class ModelCreatedUpdatedDates
 {
     /**
      * @var string

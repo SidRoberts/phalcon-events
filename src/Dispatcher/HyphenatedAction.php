@@ -4,10 +4,9 @@ namespace Sid\Phalcon\Events\Dispatcher;
 
 use Phalcon\DispatcherInterface;
 use Phalcon\Events\Event;
-use Phalcon\Mvc\User\Plugin;
 use Phalcon\Text;
 
-class HyphenatedAction extends Plugin
+class HyphenatedAction
 {
     public function beforeDispatchLoop(Event $event, DispatcherInterface $dispatcher, $data)
     {

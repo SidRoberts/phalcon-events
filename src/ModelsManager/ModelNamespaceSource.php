@@ -5,7 +5,6 @@ namespace Sid\Phalcon\Events\ModelsManager;
 use Phalcon\Events\Event;
 use Phalcon\Mvc\Model\ManagerInterface as ModelManagerInterface;
 use Phalcon\Mvc\ModelInterface;
-use Phalcon\Mvc\User\Plugin;
 
 /**
  * Allows you to use models in different namespaces without having to worry
@@ -13,7 +12,7 @@ use Phalcon\Mvc\User\Plugin;
  *
  * Sid\Models\Posts -> "Sid_Models_Posts"
  */
-class ModelNamespaceSource extends Plugin
+class ModelNamespaceSource
 {
     public function afterInitialize(Event $event, ModelManagerInterface $modelsManager, ModelInterface $model)
     {
