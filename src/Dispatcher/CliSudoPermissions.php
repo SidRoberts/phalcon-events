@@ -18,7 +18,7 @@ class CliSudoPermissions extends Plugin
             $dispatcher->getActiveMethod()
         );
 
-        if ($methodAnnotations->has("RequiresSudo")) {
+        if (!$methodAnnotations->has("RequiresSudo")) {
             return true;
         }
 
